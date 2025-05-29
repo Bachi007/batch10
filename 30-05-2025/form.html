@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Registration form</h1>
+
+<form>
+    <label for="username">Username <font color="red">*</font></label>
+    <input type="text" placeholder="Enter Username" id="username" required 
+      pattern="[a-zA-Z]{5,15}" title="only alphabets and min 5 max 15">
+    <br><br>    
+    <label for="">Mobile Number</label>
+    <input type="text" pattern="[0-9]{10}" name="" id="">
+    <br><br>
+    <label for="">Email</label>
+    <input type="email" name="" id="" required>
+    <br><br>
+    <label>Password</label>
+    <input type="password" name="" id="">
+    <br><br>
+    <label for="">DOB</label>
+    <input type="datetime-local" name="" id="">
+    <br><br>
+    <label for="">Upload Resume</label>
+    <input type="file">
+    <br><br>
+    <label for="">Gender</label>
+    <input type="radio" name="drf" id="">Male
+    <input type="radio" name="drf" id="">Female
+    <input type="radio" name="drf" id="">prefer not to say
+    <br><br>
+    <label for="">Language</label>
+    <input type="checkbox" name="" id="">Java
+    <input type="checkbox" name="" id="">JavaScript
+    <input type="checkbox" name="" id="">C++
+    <br><br>
+    <label for="">Fav Color</label>
+    <input type="color" name="" id="">
+    <br><br>
+    <label for="">Course</label>
+    <select name="" id="">
+        <option value="Full Stack">Full Stack</option>
+        <option value="Data Science">Data Science</option>
+        <option value="EV">EV</option>
+        <option value="solar">Solar</option>
+    </select>
+    <br><br>
+    <label for="">Select City</label>
+    <input list="city">
+    <datalist id="city">
+        <option value="Vizag">Vizag</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Indore">Indore</option>
+        <option value="Mumbai">Mumbai</option>
+    </datalist>
+    <br><br>
+    <label for="">Feedback</label>
+    <textarea name="" id="" cols="30" rows="5"></textarea>
+    <br><br>
+    <label for="">Rate yourself on 1 to 10</label>
+    <input type="range" name="" id="" min="1" max="10">
+    <br><br>
+    <input type="submit" value="Register Now">
+    <input type="reset" value="Cancel">
+</form>
+
+</body>
+</html>
