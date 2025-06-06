@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dropdown{
+            width:150px;
+        }
+      .dropdown-menu{
+            display:none;
+            background-color: lightgray;
+            padding:10px;
+            left:20px;
+            top:130px;
+            width: 150px;
+            position: absolute;
+            z-index:1;
+        }
+        .dropdown:hover .dropdown-menu{
+            display:block;
+        }
+        .dropdown-btn{
+            width: 150px;
+            padding:5px;
+
+        }
+
+        nav{
+            background-color: grey;
+            padding:10px;
+            position:sticky;
+            top:0px;
+        }
+        .nav-item{
+            display: inline;
+            margin-left:10px;
+        }
+        .nav-link{
+            text-decoration: none;
+            color:black;
+            font-size:15px;
+        }
+        .mycontent{
+            height: 150px;
+            width: 200px;
+            border:1px solid red;
+            padding:40px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tech Jobs</h1>
+    <h3>Hyd</h3>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Clients</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Careers</a></li>
+            <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+    <div class="dropdown">   
+        <button class="dropdown-btn">Display Menu</button>
+        <ul class="dropdown-menu">
+            <li><a href="">Full Stack</a></li>
+            <li><a href="">Data Science</a></li>
+            <li><a href="">Solar Training</a></li>
+            <li><a href="">EV Tech</a></li>
+        </ul>
+    </div>
+
+    <div class="mycontent">
+        <h1>Hello world</h1>
+    </div>
+  
+
+</body>
+</html>

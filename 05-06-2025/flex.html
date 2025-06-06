@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width:1300px;
+            flex-wrap: wrap;
+        }
+        .container div{
+            border:1px solid black;
+            padding:5px;
+        }
+
+        img{
+            filter:invert(70%);
+        }
+        img:hover{
+            filter:grayscale(0%);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div style="order:5"><img  src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" height="200" width="200" alt=""></div>
+        <div style="order:6;"><img  src="capt.jpg" height="200" width="200" alt=""></div>
+        <div style="order:2;flex-grow: 3;"><img  src="thanos.webp" height="200" width="200" alt=""></div>
+        <div style="order:1"><img  src="thor.jpg" height="200" width="200" alt=""></div>
+        <div style="order:3"><img  src="panther.jpg" height="200" width="200" alt=""></div>
+        <div style="order:4"><img  src="hulk.webp" height="200" width="200" alt=""></div>
+
+
+    </div>
+
+
+</body>
+</html>

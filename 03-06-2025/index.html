@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: inline;
+        }
+        li{
+            display:block;
+             margin-top: 50px;
+        }
+        nav{
+            background-color: grey;
+            padding: 10px;
+            width:150px;
+            height: 600px;
+        }
+        a{
+            font-size:20px;
+            text-decoration: none;
+        }
+       li:first-child{
+        background-color: yellow;
+       }
+       table,th,td{
+        border:1px solid black;
+        padding:20px;
+        border-collapse:collapse;
+       }
+       tr:nth-child(odd){
+        background-color: grey;
+       }
+       input:focus{
+        outline: 2px solid blue;
+        border:2px solid blue;
+       }
+       p::first-line{
+        color:red;
+        font-size:40px;
+        font-family: chiller;
+       }
+       h1::before{
+        content:'*';
+       }
+       input::placeholder{
+        color:red;
+       }
+       p::selection{
+        background-color: black;
+        color:black;
+       }
+    </style>
+</head>
+<body>
+    <h1>Tech Jobs</h1>
+    <h1>Full Stack MEAN</h1>
+    <br>
+    <input type="text" placeholder="enter username">
+    <nav>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="https://www.facebook.com" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="https://www.instagram.com" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="https://www.gmail.com" class="nav-link">Gallery</a></li>
+            <li class="nav-item"><a href="https://www.youtube.com" class="nav-link">Join us</a></li>
+            <li class="nav-item"><a href="https://www.tpointtech.com" class="nav-link">Contact us</a></li>
+        </ul>
+    </nav>
+
+
+    <div>
+        <p>rem ipsum dolor sit amet consectetur adipisicing elit. Nostrum blanditiis minus sunt et nihil veritatis, molestiae, recusandae neque quia sapiente ad deleniti voluptas ducimus, maxime nam consectetur sit eum amet.
+        Voluptate ea magnam blanditiis iste, quam adipisci sapiente sint nesciunt assumenda aliquid? Quaerat, asperiores perferendis architecto totam corporis numquam. Culpa fuga dolore deserunt earum corporis rerum hic! Inventore, at odio?
+        Doloremque inventore doloribus expedita! Recusandae, ut architecto consectetur distinctio ducimus, qui praesentium et, maiores facilis voluptatum nostrum dolorum ab doloribus debitis dolores! Expedita incidunt nesciunt similique, aliquam eveniet mollitia eos?</p>
+        <table>
+<tr>
+<th colspan="5">Course Details</th>
+</tr>
+<tr>
+<th>Sno</th>
+<th>Course</th>
+<th>Fee</th>
+<th>Duration</th>
+<th>Type</th>
+</tr>
+<tr>
+<td>1</td>
+<td>Full Stack</td>
+<td>20000</td>
+<td>3 months</td>
+<td rowspan="2">IT</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Data Science</td>
+<td>40000</td>
+<td>6 months</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ev Training</td>
+<td>10000</td>
+<td>1 months</td>
+<td>Non IT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ev Training</td>
+<td>10000</td>
+<td>1 months</td>
+<td>Non IT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ev Training</td>
+<td>10000</td>
+<td>1 months</td>
+<td>Non IT</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ev Training</td>
+<td>10000</td>
+<td>1 months</td>
+<td>Non IT</td>
+</tr>
+</table>
+    </div>
+
+</body>
+</html>
