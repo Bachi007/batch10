@@ -617,3 +617,166 @@ animation-name:animi;
 
 }
 
+
+
+
+no code animation
+
+
+
+<div>
+button
+ul
+
+</div>
+
+
+
+Firebase : Firebase is a open source platform for hosting, managing the web, andriod, ios, flutter, unity gaming apps offered by google 
+
+-> deployment, database, backend server 
+
+-> .web.app 
+
+
+-> nodejs-> npm (node package manager) - to install firebase tools in local machine 
+
+-> download nodejs 22 from nodejs.org
+
+https://drfbactch10.web.app/
+
+
+
+
+1. min-width: 920px >920
+
+2. max-width:920px <=920
+
+
+screen=500px
+
+h1, p
+
+
+col-12-> xs,sm
+
+col-sm
+
+col-md-5(>=768), lg,xl
+
+col-lg
+
+col-xl
+
+
+danger
+warning
+success
+primary
+secondary
+info
+dark
+white
+
+Grid System 
+Text Formatting
+Buttons, Button Group
+Images
+Tables
+cards,forms
+Alerts
+Collapse
+Dropdowns
+Navbar, Hamburger Nav
+Image carousel 
+Modal
+Accordion
+Pagination 
+
+
+Text Formatting :
+
+changing text colors, adding bg, alignment, font weight, font-style, line-height, text-decoration, text-transform 
+
+
+text-danger
+text-success
+text-warning
+text-primary
+text-info
+text-secondary
+text-dark
+text-white 
+
+bg-danger
+
+
+text-start
+text-end
+text-center
+
+text-uppercase
+text-lowercase
+text-capitalize 
+
+fw-bold
+fw-semibold
+fw-normal 
+
+
+fst-italic 
+
+fs-5 - fs-1 
+h1 to h6 
+
+
+
+margin 
+
+m-1 to m-5
+
+mt-1 to mt-5 for margin-top
+ms-1 to ms-5 for margin-left
+me-1 to me-5 for margin-right
+mb-1 to mb-5 for margin-bottom
+
+
+
+
+
+Buttons : 
+
+btn + btn-primary/btn-success/
+
+ Images : 
+
+img-fluid
+img-thumbnail 
+rounded (rounded-1 to rounded-5)
+rounded-pill
+rounded-circle
+
+
+table :
+
+table + table-hovered/table-striped/table-bordered 
+
+card : 
+
+card -> card-header+card-body+card-footer -> .card-img-top
+
+
+Forms : 
+
+.form-group
+.form-label
+.form-control 
+
+
+
+
+
+
+
+
+
