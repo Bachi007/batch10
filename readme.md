@@ -772,6 +772,36 @@ Forms :
 .form-label
 .form-control 
 
+Alerts : alert used to display warnings/success messages while login or ordering a product 
+
+-> .alert + .alert-success/.alert-danger/alert-warning.....
+
+-> dismissible alerts :  
+
+
+Badge : badge+bg-colors...
+
+Collapse : 
+
+Dropdown : 
+
+Navbar in bs5 
+
+nav -> navbar, navbar-expand-md(to create horizontal nav) bg-dark(bg color) navbar-dark(if bg color is dark use   navbar-dark otherwise navbar-light)
+
+ul - navbar-nav
+
+li - nav-item a-nav-link
+
+Hamburger menu -> div-> collapse with in that ul.navbar-nav 
+
+
+
+
+
+
+
+
 
 
 
