@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var num=20;
+
+        if(num<=1)
+        { 
+            document.write("not prime")
+        }
+        else if(num<=3){
+            document.write("prime")
+        }
+        else if(num%2==0 || num%3==0){
+            document.write("not prime")
+        }
+        else{
+        for(var i=5;i*i<=num;i+=6){
+            if(num%i==0 || num%(i+2)==0)
+            {
+                document.write("not prime")
+            }
+            
+                document.write("prime")
+            
+        }
+         document.write("prime")
+    }
+
+
+    </script>
+</body>
+</html>

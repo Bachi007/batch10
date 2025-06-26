@@ -796,6 +796,717 @@ li - nav-item a-nav-link
 Hamburger menu -> div-> collapse with in that ul.navbar-nav 
 
 
+Carousel : moving group of images 
+
+
+
+Landing page 
+
+Modal :  
+
+
+Accordion : 
+
+Pagination : the process of fetching large data from database in different pages to handle pressure of DB
+
+
+we have 1000 students in db
+
+want to display 100 students per page 
+
+1st -> 1 to 100
+2nd -> 101 to 200
+3 -> 201 to 300
+
+
+skip => (pagenum-1)*100
+
+skip => 3-1*100
+
+
+
+
+Food 
+Ecommerce
+Health
+Education
+Event Management 
+
+
+JavaScript  : Brenden Eich - 1995
+		1997 -> ECMAScript standards 
+		2008 -> Node.js+Npm (ES6)
+		2025 -> ES2024
+
+What : JS is known a popular object oriented programming language(scripting) which is faster than Java and synchronous by nature 
+
+-> JS is single threaded language
+-> JS is dynamic typed language
+
+
+
+1995-2008 -> scripting (client side scripting)
+>2008 -> programming 
+
+Object oriented 
+
+
+task 1 -> 5
+task 2 -> 3
+task 3 -> 2
+
+
+
+var a=4;
+a="bhaskar"
+a=true;
+
+
+1995 -> mocha, livescript, JavaScript 
+
+why : 
+- DOM Manipulation
+- Data validation
+- Exception Handling
+- Event Handling 
+- async features 
+- communicating with HTTP (REST API)
+- server side dev
+- testing 
+
+
+frontend - angular, react, vue, next, ember 
+backend - nodejs, expressjs, deno.js
+testing - jasmine, karma.js
+ML - brain.js, tensorflow.js
+hybrid/desktop apps - electron.js, react native, ionic 
+
+
+
+
+
+Output statements
+Variables, Datatypes
+Operators
+Control statements (conditional & Iterative)
+Functions
+Arrays
+Strings 
+Objects 
+Class and Object
+Inheritance
+Timing functions
+call backs, higher order functions
+promises
+async and await
+fetch api
+DOM methods
+Event Handling
+HTML manipulation
+CSS Manipulation
+
+
+
+
+Internal
+External 
+
+Output statements : 
+
+4
+
+document.write
+innerHTML
+console.log
+alert 
+
+
+v8 js engine 
+spidey monkey 
+
+a=2;
+
+a=a+5
+a+=5;
+
+
+
+
+
+
+Variables : variable is a named memory container which is used store, retrieve, manipulate the data in execution time of a program 
+
+-> we can name variables using identifiers in js 
+
+
+	identifier is a user defined name for a class/method/function/variable 
+	-> identifier name can have both alphabets and digits
+	-> name cannot start with digit 
+	-> we can have only _, $ as a special chars 
+	-> identifier name cannot be reserved keywords
+	-> identifiers are case sensitive 	
+
+Camel case : userName 
+
+-> two types of variables local variable, Global variables 
+
+
+Global variable : a variable which declared outside of a method/function/block of code
+-> global variable in js declared with var keyword 
+
+Local variable : a variable which declared inside of a blockof scope/method/function 
+-> local variable in js declared with let keyword 
+
+Hoisting : the concept of moving all the declarations to the top of the scope 
+-> we can declare variables after its usage
+-> we can perform hoisting only with var keyword because of TDZ  
+
+TDZ : temporal dead zone : the time period between a block scope variable declaration and its initialization, in this time accessing of variable can throw an error 
+
+
+Datatypes :  var, let, const 
+
+	int, float, Boolean, Strings, chars, Array, Class, object, date 
+
+	var a=5;
+	var b=5.3;
+	var c="String"
+	var d=true
+
+why javascript assigns data type to a variable in run time ??
+
+javascript is dynamically typed and it doesn't has primitive datatypes
+
+Coercion : a type conversion in javascript which converts type of variable automatically 
+
+implicit  : automatically it converts a variable datatype based on the data we are passing
+explicit : we are forcing it to convert into a type
+
+Operators :
+
+2 types 
+
+1. no of operands : unary, binary, ternary
+	unary : one operand -> a++,--a
+	binary: two operands -> a+b
+	ternary : conditional -> two or more operands involved in operation
+
+2. type of operations : arithmetic, relational, logical, assignment, bitwise, increment/decrement, conditional
+
+arithmetic : +, - , * ,/, %, **
+
+a+b => addition 
+a-b => subtraction
+a*b => multiplication 
+a/b => quotient 
+a%b => reminder
+a**b => 5**2 =>25
+
+
+Relational : <, >, <=, >=, ==, ===, !=, !==
+
+= : assigns the value
+
+== : it compares value
+
+=== : it compares value along with datatype 
+
+!! : if the value is 0, null, undefined it returns false otherwise true (Boolean Equivalent)
+
+Assignment : 
+=, +=, -=, *=,...
+
+a=a+5;
+a+=5;
+
+Logical : &&, ||, ! 
+
+a>b && a>c => a is biggest 
+
+a<b || a<c => a is not biggest 
+
+a=true; 
+
+b=!a;
+
+Increment : 
+
+a++, ++a
+var b= a++(5) + ++a(7);
+
+
+Conditional : when a condition has two possibilities 
+
+c = a>b ? a:b
+
+Bitwise : &, |, ^, ~  : to perform operations on binary numbers 
+
+Bitwise AND(&) : whenever both bits are 1 it returns 1 otherwise 0
+Bitwise OR (|) : whenever atleast one bit is 1 then it returns 1 otherwise 0
+Bitwise XOR(^) : whenever both bits are different it returns 1 otherwise 0
+Bitwise NOT (~) : 
+
+32bit conversion :
+
+
+<< =>  4<<2 => 4*2^n
+
+>> => 4>>1 => 4/2^n
+
+
+
+~ -4 =>  +3
+
+
+5 | 7 => 
+
+
+5=> 0101
+7=> 0111 
+
+=> 0010 = 7
+
+2^0 = 1 => 1
+2^1 = 2 => 1
+2^2 = 4 => 1
+2^3 = 8 => 0
+2^4 = 16
+
+
+marks > 90 "A"
+marks > 80 "B"
+marks < 80 "Fail"
+
+Control Statements : the statement which is used to control the flow of execution of a program 
+
+-> we have two types of control statements in js 
+	->Conditional Statements 
+	->Iterative Statements 
+Conditional : used to execute different blocks of code using a condition 
+if
+if else
+nested if else
+if else ladder
+switch 
+
+
+if : if has a predicate if the predicate is true block will execute otherwise wont execute
+
+if(condition)
+{
+//block of code 
+}
+
+
+Nested if else : 
+
+if(condition 1)
+	{
+	if(condition 2)
+		{
+		}
+	else{}
+	}
+else 
+	{
+	if(condition 4)
+		{
+		}
+	else{}
+	}
+else if ladder : when we have a multiple possibilities for a conditional variable we use else if ladder 
+
+
+if(day==0){
+	console.log("sunday")
+}
+else if(day==1)
+{
+	console.log("monday")
+}
+else if(day==2)
+{
+	console.log("tuesday")
+}
+else if(day==3)
+{
+	console.log("wednesday")
+}
+else
+{
+	console.log("weekend")
+}
+
+
+switch : 
+
+
+
+
+
+
+
+
+
+
+1,11,21,31,41,51,...121
+
+
+
+(n*10)+1
+
+n%10==0 => n+1
+
+
+fact 
+
+
+
+1900 /4 
+1900/100
+
+
+1
+2
+3
+
+5
+
+7
+i=5;
+
+i+=6
+
+n%i
+
+n%(i+2)
+
+11
+
+13
+
+
+
+17
+
+19
+
+
+
+1 to 100 even sum 
+
+While :  while is also entry controlled loop and we can use while loop when no of iterations are unknown 
+
+
+init;
+
+while(condition)
+{
+//body
+Incr/Decr 
+}
+
+1234%10=>4
+1234/10=>123  =>1
+n=123/10 =>12 =>2
+n=12/10=>1 =>3
+n=1/10=>0=>4
+
+1234/10 => 123.4 => 12.34
+
+
+parseInt => parseInt(123.4) => 123
+
+sum of digits : 
+reverse number : 1234 = 4321
+
+1230
+str="";
+rem=num%10;
+rev=(rev*10)+rem
+str+=rem;
+
+
+
+
+
+palindrome => 121 =121
+
+1234 => 1^4+2^+3^4+4^4 = armstrong
+
+1234 => 1!+2!+3!+4! => strong
+
+
+do while : exit controlled, when a block of codes wants to execute atleast once 
+
+
+do {
+
+
+   }
+while(condition);
+
+var i=0;
+do
+{
+console.log(i);
+i++
+}
+while(i<=10);
+
+
+
+
+Functions : function a block of code which is reusable at anytime in the program execution 
+
+-> simple function 
+-> function with parameters
+-> function with parameters and return 
+-> IIF
+-> Function expression
+-> Arrow Functions 
+-> callbacks
+-> Higher order functions
+
+simple function : 
+
+function identifier(){
+
+
+}
+
+identifier();
+-> simple functions can support hoisting 
+
+currying : a technique where a function with multiple arguments transformed as a series of function with single parameter for each function 
+
+
+Array : array is a collection of data in js, which works on index, the minimum index is 0 maximum index is n-1
+
+-> JS array is dynamic in nature i.e., no need to specify the size
+
+-> in two ways we can create array
+	1. array with literals
+	2. array with new reference
+
+-> var nums=[12,5,7,30,42];
+-> var nums = new Array();
+
+
+Array methods :
+
+push : we can add elements at the end of array
+pop : we can remove element from end of array
+shift : we can remove element from starting of an array
+unshift:we can add element from starting of an array
+splice : we can add or remove elements at any position of an array 
+splice(position,no of elements,new elements )
+delete
+slice
+sort(Strings,numbers)
+indexOf : returns index of first occurance of element in array 
+lastIndexOf : returns index of last occurance of element 
+
+ES6 Methods 
+
+forEach : we can apply a function to each element of an array by iterating them, forEach can modify the original array it cannot create new array
+
+Map : we can apply a function to each element of an array by iterating them, map can create new array
+
+
+
+filter : we can apply a function to each element in array and those elements which satisfies the given predicate will return to new array
+
+findIndex : used to find the index of the element which satisfies the given condition  
+
+reduce : used to get the cumulative value of all array elements by iterating them into function
+
+
+find :used to find the element which satisfies the given condition 
+join : n of array elements will convert as a string by using a delimiter 
+
+
+concat
+
+
+
+Create new array of lengths from existing array of strings ?
+
+
+find the index of first even number and which is greater than 10 ?
+
+find the sum of positive numbers in the array
+
+
+print true if all the numbers of array is even
+
+
+does js has any testing methods ?? yes => every, some 
+
+
+every => to check all elements is satisfied with given condition 
+some => to check atlest one element is satisfied with given condition 
+
+
+"array is negative" 
+"array is positive"
+
+[1,2,2,7,7,12,30,42,30];
+
+
+filter((ele,ind)=>arr.indexOf(ele)==ind) 
+
+Strings : a group of characters enclosed in ''; "",``, strings can perform index based operations like arrays
+
+
+String methods : 
+
+length : to find the length of string
+charAt : to get character at specific position
+toUpperCase : to convert string into uppercase
+toLowerCase : to convert string into lowercase
+
+slice(start,end) : to create substring from start and ending index and it has negative values for backtracing
+
+substring(start,end): to create substring from start and ending index and it doesn't have negative indexes
+
+substr(start,length): 
+indexOf : index of first occurrence of a string
+lastIndexOf: index of last occurrence of a string
+search: index of first occurrence of string matched with regex 
+startsWith :
+endsWith
+includes
+replace
+padStart
+padEnd
+split
+
+
+
+
+001
+002
+003
+....
+010
+011
+012
+..
+100
+
+
+
+Objects : objects are basic datatype in js which is used to store collection of key:value pairs, it is mainly used to group related data together 
+
+-> we can create objects in 4 types in js 
+	->Object literal
+	->new reference
+	->functional constructor
+	->classes 
+
+
+
+-> object literal : 
+	var student = {
+			studentName:"John",
+			studentAddress:"Hyd",
+			studentMarks:85
+			}
+
+obj.property
+student.studentName
+
+
+-> object using new reference: 
+	var student=new Object();
+	student.studentName="John"
+	student.studentAddress="Hyd"
+
+
+
+
+student s1=new student();
+
+var s1=new student();
+
+
+
+s1={};
+
+2. s1={this}
+
+Object methods : a function that belongs to property of an object 
+call, apply, bind
+
+function call: used to borrow a function from one object to another, we can pass individual arguments as extra parameter
+ 
+function apply : used to borrow a function from one object to another, we can pass extra parameters in the form of array
+
+function bind : used to borrow a function but instead of executing directly it returns new instance of a function, we can pass individual arguments as extra parameter
+
+
+array destructuring : the process of unpacking the values into individual variables from arrays
+
+
+var arr=[12,7,5,30,42,46];
+
+var [a,b]=arr;
+
+REST : combining simplest parts into complex array 
+SPREAD : dividing a complex array into simple parts 
+
+
+timing functions in js : timing functions allows us to schedule code to execute after a delay or at regular time intervals
+
+
+setInterval : we can execute a specific function for every specified time interval 
+setTimeout : we can pause the execution of a function upto certain time
+
+clearInterval : 
+
+Event Loop:  is a fundamental concept of javascript to handle asynchronous operations by prioritizing single threaded nature of language
+-> first executes callstack(line by line code)
+->push web api requests, callbacks(setintervals, promises) into event loop 
+-> after completion of callstack execution components of event loop will execute 
+
+
+closure : the process of returning an inner function which has access to local variables of outer function 
+-> by using closure we can use local variables of a function even its completes execution 
+
+
+
+setTimeout(hello,5000)
+
+
+
+
+
+class, object, inheritance : 
+
+2022 private fields 
+
+class is a container which can have variables, methods, constructors
+-> we can create objects using class to have key:value pairs 
+-> classes in JS doesn't support hoisting
+
+
+Inheritance :  a child class can acquire the properties of its parent class, here we can use parent and child relation using extends keyword
+
+method overriding : if we have a method with same name and parameters in both parent and child class
+
+super: to call parent class methods, constructors 
+
+
+callbacks, higher order functions
+promises
+async await
+fetch 
+
+
+callbacks : the function that passed as an argument to another function is called as callback function
+
+higher order: the function which accepts another function as parameter is called as higher order functions
 
 
 
