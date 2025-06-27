@@ -1508,6 +1508,81 @@ callbacks : the function that passed as an argument to another function is calle
 
 higher order: the function which accepts another function as parameter is called as higher order functions
 
+why promises why not callbacks :
+
+	 
+
+4 -> 
+
+function(fun2,fun3,fun4){
+	function2(fun3,fun4){
+		function3(fun4){
+			function4(){
+
+				}
+
+			}
+	}
+}
+
+promises in ES6 : is an Object which is used to handle the result of asynchronous operation which is not existed currently it will be fulfilled in the future or will be rejected 
+
+-> promise has 3 different states 
+
+pending -> promise created but not yet solved
+fulfill -> promise execution completed and its resolved 
+reject -> promise execution completed but it is rejected 
+-> to handle different states of promise we use following methods
+then() - to handle successful state of promise
+catch() - to handle rejection state
+finally() - to execute a block of irrespective of result of a promise 
+
+-> promise has a default function with two parameters resolve and reject which is used to define the state of promise 
+
+
+-> async and await 
+
+await : await keyword is used to pause the execution of a function until the promise completes its execution 
+-> await keyword must be used within async function 
+
+async : async function always returns a promise in js and which can have await to wait for the result of a promise 
+
+
+fetch : fetch method used to make http requests(like GET,POST,PUT,PATCH,DELETE), introduced in ES6
+-> previously we use XMLHttpRequests to communicate with REST APIs as part of AJAX 
+
+GET -> to fetch data from db
+POST -> to post new data into db
+PUT -> update existing data (entire object)
+PATCH -> update existing property (single property of object)
+DELETE -> delete existing data 
+
+
+-> by default fetch method works on GET method 
+
+-> basically fetch used to get or post data to/from REST API
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
