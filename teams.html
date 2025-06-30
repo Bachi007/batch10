@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team Generator by Number of Teams</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f2f5;
+    }
+    .section {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .student-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .student-list span {
+      background: #e4e6eb;
+      padding: 6px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    .teams {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .team {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      width: 220px;
+    }
+    .team h3 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .team p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="section">
+  <h2>🎓 All Students</h2>
+  <div class="student-list" id="studentList"></div>
+</div>
+
+<div class="section">
+  <input type="number" id="numTeams" placeholder="Enter number of teams (e.g. 3 or 9)">
+  <button onclick="generateTeams()">Generate Teams</button>
+</div>
+
+<div class="section teams" id="teamsContainer"></div>
+
+<script>
+  const allStudents = [
+    "MEKA NAVYA SRI", "SAMREEN", "Bethalam Bhavana", "DAKA SRAVANI",
+    "Shivani Andapally", "TALLA HARSHITHA", "GAJJE SAIKEERTHI", "POLANI VIGHNESH",
+    "KONAKALLA KHASYAP SURYA SAKETH", "BINDHU BADETI", "TEJASWINI PODILI", "CHAPPIDI SINDHU",
+    "PEDAPATI SRUTHI", "MOHAMMAD AYESHA", "THOPURI ESWARAMMA", "POTNURU SAI AKHIL",
+    "MAMIDI VAMSI", "PODILI TARUN SRUJENESH KRISHNA", "KAIRAMKONDA RAJ KUMAR", 
+    "GUNTAMADUGU LAKSHMI", "UNGARALA NAGA VENKATA RAVI TEJA", "BALLA SAI", "YANDRAPU PRADEEP",
+    "BANTU YASWANTH KUMAR", "RAJAM BHAVITHA", "BEHARA SAI SAKETH", "UTUKURI BALAJI","Srikanth sir"
+  ];
+
+  const girls = [
+    "MEKA NAVYA SRI", "SAMREEN", "Bethalam Bhavana", "DAKA SRAVANI",
+    "Shivani Andapally", "TALLA HARSHITHA", "GAJJE SAIKEERTHI", "BINDHU BADETI",
+    "TEJASWINI PODILI", "CHAPPIDI SINDHU", "PEDAPATI SRUTHI", "MOHAMMAD AYESHA",
+    "THOPURI ESWARAMMA", "GUNTAMADUGU LAKSHMI", "RAJAM BHAVITHA"
+  ];
+
+  const boys = allStudents.filter(name => !girls.includes(name));
+
+  // Display students
+  const studentListDiv = document.getElementById("studentList");
+  allStudents.forEach(name => {
+    const span = document.createElement("span");
+    span.textContent = name;
+    studentListDiv.appendChild(span);
+  });
+
+  function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  function generateTeams() {
+    const numTeams = parseInt(document.getElementById("numTeams").value);
+    const totalStudents = allStudents.length;
+    const teamsContainer = document.getElementById("teamsContainer");
+    teamsContainer.innerHTML = "";
+
+    if (!numTeams || numTeams <= 0) {
+      alert("Please enter a valid number of teams.");
+      return;
+    }
+
+    if (numTeams > totalStudents) {
+      alert(`Only ${totalStudents} students available. Cannot make ${numTeams} teams.`);
+      return;
+    }
+
+    const teamSize = Math.floor(totalStudents / numTeams);
+    const remainder = totalStudents % numTeams;
+
+    let boysPool = shuffle([...boys]);
+    let girlsPool = shuffle([...girls]);
+    let allPool = shuffle([...allStudents]);
+    let used = new Set();
+    let teams = [];
+
+    for (let i = 0; i < numTeams; i++) {
+      let team = [];
+
+      // Ensure 1 girl
+      const girl = girlsPool.find(g => !used.has(g));
+      if (!girl) {
+        alert("Not enough girls to ensure one per team.");
+        return;
+      }
+      team.push(girl);
+      used.add(girl);
+
+      // Ensure 1 boy
+      const boy = boysPool.find(b => !used.has(b));
+      if (!boy) {
+        alert("Not enough boys to ensure one per team.");
+        return;
+      }
+      team.push(boy);
+      used.add(boy);
+
+      // Fill the rest of the team
+      const extra = i < remainder ? 1 : 0; // distribute remainder
+      const membersToAdd = teamSize + extra - 2;
+
+      const remaining = allStudents.filter(s => !used.has(s));
+      for (let j = 0; j < membersToAdd && j < remaining.length; j++) {
+        team.push(remaining[j]);
+        used.add(remaining[j]);
+      }
+
+      teams.push(team);
+    }
+
+    // Render
+    teams.forEach((team, index) => {
+      const div = document.createElement("div");
+      div.className = "team";
+      div.innerHTML = `<h3>Team ${index + 1}</h3>` + team.map(name => `<p>${name}</p>`).join("");
+      teamsContainer.appendChild(div);
+    });
+  }
+</script>
+
+</body>
+</html>

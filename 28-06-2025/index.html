@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hello{
+            color:red;
+            font-family: chiller;
+        }
+    </style>
+</head>
+<body>
+      <button onclick="changeStyles()">Add Content</button>
+
+    <script>
+        function changeStyles(){
+        
+         var myh1=   document.createElement("h1");
+            myh1.textContent="Hello world"
+            myh1.classList.add("hello");
+           var mydiv= document.createElement("div");
+           mydiv.append(myh1);
+
+           document.querySelector("body").append(mydiv)
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

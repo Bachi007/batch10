@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onmousemove="hello(event)">
+    
+<h1 id="myh1">Tech Jobs</h1>
+<h1>view in big screen</h1>
+<h3 id="coord">coordinates x: y:</h3>
+
+
+
+<img src="https://cdn.britannica.com/49/182849-050-4C7FE34F/scene-Iron-Man.jpg" 
+  onmouseover="hello(this)" onmouseout="hello2(this)" height="200" width="200" alt="">
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<script>
+
+    function hello(e){
+        var x=e.clientX;
+        var y=e.clientY;
+
+        document.getElementById("coord").innerHTML=`co ordinates X:${x} y:${y}`
+    }
+
+ function hello2(bs){
+        bs.style.height="200px"
+        bs.style.width="200px"
+    }
+ 
+
+</script>
+
+</body>
+</html>

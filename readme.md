@@ -1564,17 +1564,50 @@ DELETE -> delete existing data
 
 
 
+DOM  :  Document Object Model 
+
+-> DOM is basically defines how we are accessing HTML elements on the document and it has a tree like structure 
+-> getElementById
+   getElementsByClassName
+   getElementsByTagName
+   querySelector 
+
+createElement 
+
+
+Math Object : 
+Math 
+
+sqrt
+pow
+max
+min
+ceil -> upper
+floor -> lower 
+round -> .5> upper < lower
+random
+sin
+cos 
+
+
+
+Event Handling : JavaScript can respond and execute a piece of code when user interact with webpage like clicking, changing values or browser actions like on loading webpage, on resizing the screen etc..
+
+
+user events : onclick, onchange, onmouseup,onmousedown, onmouseover,onmouseout, onmousemove 
+browser events : onload, onresize, ononline, onoffline
+
+
+onload : when the total content of the webpage is loaded in the browser window 
+
+onresize : when browser window resized 
 
 
 
 
+event bubbling : when the child element is clicked it will changes the state of parent also 
 
-
-
-
-
-
-
+event propagation: the way of DOM elements traced from one to another 
 
 
 
