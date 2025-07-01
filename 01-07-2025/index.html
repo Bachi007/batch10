@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.7/css/bootstrap.min.css" integrity="sha512-fw7f+TcMjTb7bpbLJZlP8g2Y4XcCyFZW8uy8HsRZsH/SwbMw0plKHFHr99DN3l04VsYNwvzicUX/6qurvIxbxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <button onclick="hello()" id="darkbtn">Dark</button>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-4">
+                <h1 contenteditable="true">Login Form</h1>
+                   <form id="loginform">
+             
+                <div class="form-group">
+                    <label for="" class="form-label" contenteditable="true">username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username" required pattern="[A-Za-z]{3,15}">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                    <input type="checkbox" onchange="changestyle()">Show Password
+                </div>
+                <div class="form-group">
+                    <button type="submit">Login </button>
+                    <button>cancel</button>
+                </div>
+                       
+                </form>
+
+            </div>
+        </div>
+        <div class="row">
+            <p id="result" class="alert alert-success"></p>
+        </div>
+    </div>
+
+    <script>
+        //show password function
+        function hello(){
+            if(document.body.style.backgroundColor=="white"){
+                            document.body.style.backgroundColor="black"
+                            document.getElementById("darkbtn").textContent="White"
+            }
+            else{
+                            document.body.style.backgroundColor="white"
+                            document.getElementById("darkbtn").textContent="Dark"
+            }
+        }
+        function changestyle(){
+            var password=document.getElementById("password");
+            if(password.type=="text"){
+                password.type="password"
+            }
+            else{
+                password.type="text"
+            }
+        }
+
+
+        document.getElementById("loginform").addEventListener('submit',function(e){
+            e.preventDefault();   
+            var username=document.getElementById("username").value;
+            var password=document.getElementById("password").value;
+            var reqpwd=username.slice(0,3)+"123"
+            if(password==reqpwd){
+                document.getElementById("result").innerHTML="Login Success"
+            }
+            else{
+           document.getElementById("result").innerHTML="Login Failed"
+                
+            }
+        
+        })
+
+        
+    </script>
+
+</body>
+</html>
