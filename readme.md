@@ -1608,10 +1608,494 @@ onresize : when browser window resized
 event bubbling : when the child element is clicked it will changes the state of parent also 
 
 event propagation: the way of DOM elements traced from one to another 
+Event Listeners : 
+
+Objects : Object is data structure in js which stores key:value pairs to maintain properties of something 
+
+4
+Object literals
+New reference
+functional constructor
+class 
+
+
+var person ={
+	firstName:"John",
+	lastName:"Ducket",
+	dob:"25-05-1956"
+}
+person.firstName
+
+for in : 
+
+for(key in person){
+console.log(key+" : "+person[key])
+}
+
+
+
+{
+courseId:1,
+courseName:"MEAN stack",
+courseDuration:6,
+courseReview:"perfect "
+}
+
+arr.map((course)=>{
+	return {
+		...course,
+		courseReview:course.courseDuration>=6 ? "too long":"perfect"
+
+		}
+	})
 
 
 
 
+
+1,2,3,11,15,16
+1,11,15,16,2,3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Angular Introduction 
+Components 
+Data Binding 
+Directives (Structural, attribute, custom)
+Angular Forms (Reactive, Template driven)
+Pipes
+Routing, Router-outlet
+Dependency Injection
+Services
+Observables 
+HttpClientModule
+View child, view children 
+Input, Output
+
+
+
+Angular : 
+
+JavaScript 
+
+-> mozila corporation 
+-> dynamic typed 
+-> error detection at runtime 
+-> it is interpreted language
+-> no interfaces, generics, primitive data types
+
+Typescript 
+->Microsoft 
+-> static typed 
+-> error detection at compile time
+-> compiled into js 
+-> supports interfaces, generics, primitive data types
+
+
+
+Angular 
+-> angular is framework
+-> angular runs with typescript
+-> angular by Google
+-> supports features like twoway data binding, Dependency Injection
+-> works with Browser DOM
+-> supports httpModule,FormsModule, routing by default
+
+React
+-> react is UI library
+-> runs with JavaScript
+-> react by Meta(fb)
+-> only supports one way data binding
+-> works with virtual DOM 
+-> need to install third party tools like axios,virtual-dom,react-router 
+
+Angular : 
+
+key features : 
+
+Component based architecture : components are basic building blocks of angular which has 4 files HTML,CSS,TS, specs.ts (for testing) which connected over @component annotation 
+
+Data binding : process of communication between template(html) and controller(ts), angular has both oneway and twoway data binding 
+
+Dependency Injection : the process of injecting a class into components for code reusability or access to model layer 
+
+Routing : loading different components into single html template in browser for different url paths
+
+MVC Architecture 
+
+Services : services are injectable classes which has all the http request calls to integrate frontend and backend 
+
+
+Angular Installation : 
+
+1. nodejs and npm 
+
+2. to install angular : npm install -g @angular/cli 
+
+3. to check version of angular : ng version
+
+4. to create project in angular : ng new projectName --no-standalone 
+
+5. to run angular project : ng serve 
+
+
+Angular Project Structure  : 
+
+public folder : offline images, styles, scripts etc... like additional assets of the application
+
+src folder : main source code of the angular application 
+
+
+node_modules folder: has all the dependencies, software's, libraries that need to build angular application 
+
+package.json : has versions of all the dependencies, software's, libraries that need to build angular app, we can edit versions if needed
+
+package-lock.json : has versions of all the dependencies, software's, libraries that need to build angular app, we cannot edit versions
+
+angular.json : it has all the configuration of angular application 
+
+
+gitignore : it has list of folders, files to ignore while pushing the code in GitHub 
+
+tsconfig.json : it configures typescript compiler to convert typescript files to javascript 
+
+tsconfig-app.json: it configures the files which needed to be compiled which needs to ignore in angular app
+
+
+index.html : only file that is going to load in the browser while running angular application
+
+styles.css : global stylesheet of angular application 
+
+main.ts : angular application starts compilation process from main.ts 
+
+app folder: default component in angular application which has 6 files be default 
+
+app-routing-module.ts : used to create routing among the components of angular app
+
+app-module.ts : it binds all the components together to create view of angular app
+
+
+
+
+how angular app works : 
+
+main.ts -> app-module.ts -> components of the application 
+
+
+Components : components are basic building blocks of angular app, we can create components using following commands
+
+ng generate component nameOfComponent
+
+or 
+
+ng g c nameofcomponent
+
+-> components has 4 files-> html,css,ts,specs.ts all files are configured in @component annotation in typescript class
+
+->to use components we can use its selector
+
+-> @componenet annotation has selector,templateURL(linking html page),stylesURL(linking css) 
+
+
+ 
+Data Binding : it is a communication or coordination between template and typescript class, automatic synchronization of data in template and typescript class is called as data binding
+
+we have two types of data binding
+
+one way data binding -> string interpolation, property binding, event binding
+
+two way data binding 
+
+
+string interpolation : we can insert data from component(ts) to view(html) directly using {{}}
+
+property binding: we can assign a variable from component to html property using []
+
+event binding : we can respond to user actions by calling a method in component class, here to work with events we need to use () 
+
+two way data binding : the process of synchronization of data between component and template at same time 
+
+-> here to update value from template to component we use [(ngModel)]
+-> to update value from component to template we use string interpolation 
+
+
+
+Directives : directive is a class that adds behavior to DOM elements in angular app, we can modify, update the behavior of DOM or we can modify the appearance of DOM elements using directives 
+
+
+-> we have 4 types of directives in angular 1. component directives 2. structural directives 3. attribute directives 4. custom directives 
+
+
+component directives : a directive with associated with HTML template to create view, it has @component decorator to link html template and styles url 
+
+-> it has selector, TemplateURL, stylesURL to create a proper view of the angular application 
+
+
+structural directives : we can change the behavior of template, we can display different templates of code based on a condition or we can iterate a template upto certain times 
+
+-> structural directives always starts with *
+-> we have 3 main structural directives *ngIf, *ngFor, ngSwitch 
+-> we have to write only single structural directive for one html tag
+
+*ngIf: based on a condition we can execute different blocks of HTML template 
+
+ng-template is block of code in angular which doesn't execute directly, it will execute only when ngIf condition fails
+
+
+*ngFor : 
+
+*ngIf="p.category==`men's clothing`"
+
+
+ngSwitch :  
+
+
+ngStyle
+
+
+arr of numbers : green : red
+
+
+ngClass 
+
+custom directives 
+
+DI 
+
+Routing : 
+
+
+app-routing-module.ts 
+
+
+localhost:4200/about
+
+
+
+flipkart.com/q?=djsvbfjs 
+
+
+
+
+
+
+
+
+
+
+Angular forms
+template driven forms 
+reactive forms 
+
+template driven forms : template driven forms are angular forms created using directives and template syntax, which are very easy to use in simple scenarios like login, feedback, contact forms
+->we use [(ngModel)] to complete form submission here just like twoway data binding 
+-> we need to import FormsModule in imports section of app-module.ts
+
+
+
+Angular Router class : 
+
+
+navigateByUrl -> 
+
+Router 
+
+
+
+class mainclass{
+
+	var d1=new display();
+	d1.greet()
+
+}
+
+class display{
+
+
+greet(){
+
+
+}
+
+
+}
+
+
+
+Dependency Injection : DI is a design pattern used to inject the dependencies or injectable classes into component class from external resources to share common logic around components and for code reusability
+
+-> DI must be performed with constructor of the class 
+
+
+Reactive Forms : An angular form where the structure, validators can be created and managed by component class rather than template, it can bind the values using formControlName and it doesn't support two way data binding 
+
+FormGroup : a form object which can have structure of form like an object
+
+formBuilder : a service class which helps in creating group of form controls into a single obj
+
+formControlName: used to bind the values from formGroup with input tags
+
+Validators : a function which handles all validations of a form 
+
+disabled : it will disable the button if form is not valid
+
+
+custom directives : 
+
+
+
+-> ng generate directive highlight or ng g d highlight 
+
+-> it can create two files one is highlight.directive.ts and highlight.directive.specs.ts
+
+
+Angular Pipes : pipes used to transform the data in string interpolation 
+
+lowercase
+uppercase
+date
+json
+slice
+currency
+custom pipe : user defined pipe, it has a method called transform where we can transform and return the data when it is used in component 
+
+-> ng g p sqrt 
+
+
+
+Services :  A class where which we can write common logic, business logic for abstraction, make http requests to communicate with API
+
+-> services comes with @Injectable annotation so that we can inject these classes into components using DI 
+
+->we can create service using following command
+
+	ng generate service serviceName
+	ng g s serviceName 
+	
+
+
+
+HttpCientModule: 
+
+
+
+GET
+POST
+PUT
+PATCH
+DELETE
+
+
+https://api.chucknorris.io/jokes/random
+
+
+
+
+HTTPCLIENTMODULE -> app-module.ts -> imports 
+
+
+HttpClient -> get,post,put,patch,delete 
+
+get -> fetch the data from api
+post -> to post new data to db
+put -> update existing data
+patch -> update existing data property
+delete -> delete existing data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class fakestore{
+
+getJoke(){
+
+
+
+}
+
+}
+
+class mainclass{
+main(){
+
+fakestore f1=new fakestore();
+f1.getJoke();
+
+var f1=new fakestore();
+
+
+constructor(private f1:fakestore){}
+
+
+
+
+
+
+}
+
+
+}
+
+
+
+subscribe : subscribe is an observable method which will receive the updates from a method when it got new data or response and it has arrow function to receive data in a variable 
+
+
+flow 
+
+0. create service called fakestore and update app-module.ts with HttpClinetModule in imports
+
+1. chuck Norris api has some data
+
+2. need to create DI for HttpClient to work with http methods like Get,Post....
+
+3. create method getJokes to call chuck Norris api and return response 
+
+4. in component, create DI for service and create method called display for event binding
+
+5. in display method call getJokes method from service and subscribe to it to receive data 
+
+6. store response in class variable and perform string interpolation  
+
+
+
+ngOnInit : a block of code which will execute when the component is loaded in the browser 
+
+-> ngOnInit is a life cycle hook in angular which will execute automatically when the component is loaded in browser 
+
+constructor
+
+
+
+Service : 
 
 
 
